@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $lots = DB::table('entries')->get()->count();
+    return $lots;
 });
